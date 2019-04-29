@@ -8,9 +8,9 @@ contract Casino {
 	// Add different class variables here that you might need to use to store data
 	address owner;
 	// YOUR CODE HERE
-	uint maxAmountOfBets;
-	uint minAmountOfBets;
-	uint numberOfBets;
+	uint public maxAmountOfBets;
+	uint public minAmountOfBets;
+	uint public numberOfBets;
 	uint timeStart;
 	mapping (address => uint) bets;
 	mapping (address => uint) amountBet;
