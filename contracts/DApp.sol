@@ -11,7 +11,7 @@ contract Casino {
 	uint public maxAmountOfBets;
 	uint public minAmountOfBets;
 	uint public numberOfBets;
-	uint timeStart;
+	uint public timeStart;
 	mapping (address => uint) bets;
 	mapping (address => uint) amountBet;
 	address payable[] betters;

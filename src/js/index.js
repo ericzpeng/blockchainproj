@@ -17,74 +17,115 @@ class App extends React.Component {
          console.log("Using web3 detected from external source like Metamask")
          this.web3 = new Web3(web3.currentProvider);
          const MyContract = this.web3.eth.contract([
-           
-   	{
-   		"constant": false,
-   		"inputs": [
-   			{
-   				"name": "numberToBet",
-   				"type": "uint256"
-   			}
-   		],
-   		"name": "bet",
-   		"outputs": [],
-   		"payable": true,
-   		"stateMutability": "payable",
-   		"type": "function"
-   	},
-   	{
-   		"constant": false,
-   		"inputs": [],
-   		"name": "distributePrizes",
-   		"outputs": [],
-   		"payable": false,
-   		"stateMutability": "nonpayable",
-   		"type": "function"
-   	},
-   	{
-   		"constant": false,
-   		"inputs": [],
-   		"name": "generateWinningNumber",
-   		"outputs": [
-   			{
-   				"name": "",
-   				"type": "uint256"
-   			}
-   		],
-   		"payable": false,
-   		"stateMutability": "nonpayable",
-   		"type": "function"
-   	},
-   	{
-   		"constant": false,
-   		"inputs": [],
-   		"name": "resetData",
-   		"outputs": [],
-   		"payable": false,
-   		"stateMutability": "nonpayable",
-   		"type": "function"
-   	},
-   	{
-   		"inputs": [],
-   		"payable": false,
-   		"stateMutability": "nonpayable",
-   		"type": "constructor"
-   	},
-   	{
-   		"constant": true,
-   		"inputs": [],
-   		"name": "numberOfBets",
-   		"outputs": [
-   			{
-   				"name": "",
-   				"type": "uint256"
-   			}
-   		],
-   		"payable": false,
-   		"stateMutability": "view",
-   		"type": "function"
-   	}
-   ]);
+      	{
+      		"constant": false,
+      		"inputs": [
+      			{
+      				"name": "numberToBet",
+      				"type": "uint256"
+      			}
+      		],
+      		"name": "bet",
+      		"outputs": [],
+      		"payable": true,
+      		"stateMutability": "payable",
+      		"type": "function"
+      	},
+      	{
+      		"constant": false,
+      		"inputs": [],
+      		"name": "distributePrizes",
+      		"outputs": [],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "function"
+      	},
+      	{
+      		"constant": false,
+      		"inputs": [],
+      		"name": "generateWinningNumber",
+      		"outputs": [
+      			{
+      				"name": "",
+      				"type": "uint256"
+      			}
+      		],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "function"
+      	},
+      	{
+      		"constant": false,
+      		"inputs": [],
+      		"name": "resetData",
+      		"outputs": [],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "function"
+      	},
+      	{
+      		"inputs": [],
+      		"payable": false,
+      		"stateMutability": "nonpayable",
+      		"type": "constructor"
+      	},
+      	{
+      		"constant": true,
+      		"inputs": [],
+      		"name": "maxAmountOfBets",
+      		"outputs": [
+      			{
+      				"name": "",
+      				"type": "uint256"
+      			}
+      		],
+      		"payable": false,
+      		"stateMutability": "view",
+      		"type": "function"
+      	},
+      	{
+      		"constant": true,
+      		"inputs": [],
+      		"name": "minAmountOfBets",
+      		"outputs": [
+      			{
+      				"name": "",
+      				"type": "uint256"
+      			}
+      		],
+      		"payable": false,
+      		"stateMutability": "view",
+      		"type": "function"
+      	},
+      	{
+      		"constant": true,
+      		"inputs": [],
+      		"name": "numberOfBets",
+      		"outputs": [
+      			{
+      				"name": "",
+      				"type": "uint256"
+      			}
+      		],
+      		"payable": false,
+      		"stateMutability": "view",
+      		"type": "function"
+      	},
+      	{
+      		"constant": true,
+      		"inputs": [],
+      		"name": "timeStart",
+      		"outputs": [
+      			{
+      				"name": "",
+      				"type": "uint256"
+      			}
+      		],
+      		"payable": false,
+      		"stateMutability": "view",
+      		"type": "function"
+      	}
+      ]);
          this.state.ContractInstance = MyContract.at("0x412bc8b2aa30bb29668ce8d4d3b257f67c0b655c");
          window.a = this.state;
       } else {
