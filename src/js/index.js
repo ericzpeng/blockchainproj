@@ -149,13 +149,13 @@ class App extends React.Component {
             })
          }
       })
-      // this.state.ContractInstance.maxAmountOfBets((err, result) => {
-      //    if(result != null){
-      //       this.setState({
-      //          maxAmountOfBets: parseInt(result)
-      //       })
-      //    }
-      // })
+      this.state.ContractInstance.maxAmountOfBets((err, result) => {
+         if(result != null){
+            this.setState({
+               maxAmountOfBets: parseInt(result)
+            })
+         }
+      })
       this.state.ContractInstance.minAmountOfBets((err, result) => {
          if(result != null){
             this.setState({
@@ -211,7 +211,7 @@ class App extends React.Component {
       if (this.state.plugInInstalled) {
          return (
             <div className="main-container">
-               <h1>Bet for your best number and win huge amounts of Ether</h1>
+               <h1>Bet for your best number and win HUGE amounts of Ether</h1>
 
                   <div className="block">
                      <b>Number of bets:</b> &nbsp;
