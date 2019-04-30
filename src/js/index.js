@@ -149,13 +149,13 @@ class App extends React.Component {
             })
          }
       })
-      this.state.ContractInstance.maxAmountOfBets((err, result) => {
-         if(result != null){
-            this.setState({
-               maxAmountOfBets: parseInt(result)
-            })
-         }
-      })
+      // this.state.ContractInstance.maxAmountOfBets((err, result) => {
+      //    if(result != null){
+      //       this.setState({
+      //          maxAmountOfBets: parseInt(result)
+      //       })
+      //    }
+      // })
       this.state.ContractInstance.minAmountOfBets((err, result) => {
          if(result != null){
             this.setState({
